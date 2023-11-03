@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_application/layout/home_layout.dart';
-import 'package:movie_application/screens/splash_screen/Splash_screen.dart';
-import 'package:movie_application/screens/home/home_view.dart';
+import 'package:movie_application/screens/splash screen/Splash_screen.dart';
 
 import 'core/application_theme.dart';
 
