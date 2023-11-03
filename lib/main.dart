@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:movie_application/layout/home_layout.dart';
 import 'package:movie_application/screens/splash_screen/Splash_screen.dart';
+import 'package:movie_application/screens/home/home_view.dart';
 
 import 'core/application_theme.dart';
 
@@ -19,7 +21,8 @@ class MyApp extends StatelessWidget {
       darkTheme: ApplicationTheme.darkTheme,
       initialRoute:SplashScreen.routeName,
       routes: {
-        SplashScreen.routeName: (context) => SplashScreen(),
+        SplashScreen.routeName: (context) => const SplashScreen(),
+        HomeLayout.routeName: (context) => const HomeLayout(),
       },
 
     );

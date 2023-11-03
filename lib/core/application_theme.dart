@@ -21,8 +21,11 @@ class ApplicationTheme {
       ),
     ),
     bottomNavigationBarTheme:  BottomNavigationBarThemeData(
-      backgroundColor: darkGrey,
+      backgroundColor: lightGrey,
       selectedItemColor: primaryColor,
+      selectedIconTheme:  IconThemeData(
+        color: primaryColor
+      ),
       unselectedItemColor: Colors.white.withOpacity(.74),
       type: BottomNavigationBarType.fixed,
       elevation: 10
