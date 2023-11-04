@@ -24,7 +24,7 @@ class MoviesCategory extends StatelessWidget {
           Stack(children: [
             Image.asset(title1),
             Padding(
-              padding: const EdgeInsets.only(top: 65, left: 60),
+              padding: const EdgeInsets.only(top: 70, left: 60),
               child: Text(
                 text1,
                 style: theme.textTheme.titleLarge!
@@ -41,7 +41,7 @@ class MoviesCategory extends StatelessWidget {
                     children: [
                       Image.asset(title2),
                       Padding(
-                        padding: const EdgeInsets.only(top: 70, left: 40),
+                        padding: const EdgeInsets.only(top: 80, left: 60),
                         child: Text(
                           text2,
                           style: theme.textTheme.titleLarge!

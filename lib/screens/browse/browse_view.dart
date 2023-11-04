@@ -108,7 +108,7 @@ class _BrowseViewState extends State<BrowseView> {
                     "assets/images/Western.png",
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 40, left: 50),
+                    padding: EdgeInsets.only(top: 70, left: 60),
                     child: Text("Western",
                         style: theme.textTheme.titleLarge!
                             .copyWith(fontWeight: FontWeight.bold)),
