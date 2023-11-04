@@ -8,6 +8,25 @@ class ApplicationTheme {
   static Color darkBlack = const Color(0xff121312);
   static ThemeData lightTheme = ThemeData(
     primaryColor: primaryColor,
+    colorScheme: ColorScheme(
+      primary: primaryColor,
+      secondary: lightGrey,
+      brightness: Brightness.light,
+      onSecondary: darkBlack,
+      onPrimary: darkGrey,
+      onBackground: Colors.white,
+      onError: Colors.white,
+      onErrorContainer: Colors.white,
+      onPrimaryContainer: Colors.white,
+      onSecondaryContainer: Colors.white,
+      onSurface: Colors.white,
+      primaryContainer: Colors.white,
+      secondaryContainer: Colors.white,
+      surface: Colors.white,
+      error: Colors.red,
+      errorContainer: Colors.white,
+      background: Colors.transparent,
+    ),
     scaffoldBackgroundColor: darkBlack,
     appBarTheme:  AppBarTheme(
       backgroundColor: darkGrey,
@@ -39,7 +58,7 @@ class ApplicationTheme {
       bodyLarge: GoogleFonts.inter(
         color: Colors.white,
         fontSize: 16,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.bold,
       ),
       bodyMedium: GoogleFonts.inter(
         color: Colors.white,
