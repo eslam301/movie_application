@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_application/screens/browse/Widgets/MoviesCategory.dart';
+import 'package:movie_application/screens/browse/browse_category_view.dart';
+
+import '../../home/movie_details.dart';
 
 class MoviesCategoryItem extends StatefulWidget {
   final Movies_Category movies_category;
@@ -23,7 +26,11 @@ class _MoviesCategoryItemState extends State<MoviesCategoryItem> {
     var theme = Theme.of(context);
     return GestureDetector(
       onTap: () {
-        widget.onItemClick(widget.movies_category);
+        Navigator.pushNamed(context, BrowseCategoryView.routeName.toString(), arguments: {
+          "index": widget.index,
+          "movies_category": widget.movies_category
+
+        });
       },
       child: Container(
 

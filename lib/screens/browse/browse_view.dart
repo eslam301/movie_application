@@ -119,13 +119,10 @@ class _BrowseViewState extends State<BrowseView> {
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             toolbarHeight: 100,
-
             title: Padding(
               padding: const EdgeInsets.only(left: 10, top: 30),
               child: Text(
-                selectedCategory == null
-                    ? "Browse Category"
-                    : selectedCategory!.categoreytitle,
+                     "Browse Category",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 22,
@@ -133,8 +130,7 @@ class _BrowseViewState extends State<BrowseView> {
               ),
             ),
           ),
-          body: selectedCategory == null
-              ? Padding(
+          body: Padding(
                   padding: const EdgeInsets.all(12),
                   child: GridView.builder(
                     gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -151,11 +147,7 @@ class _BrowseViewState extends State<BrowseView> {
                     itemCount: genres.length,
                   ),
           )
-              : Container(
-                  child: GestureDetector(
-                  onTap: () {},
-                )
-          )
+
       ),
     );
   }
@@ -165,6 +157,7 @@ class _BrowseViewState extends State<BrowseView> {
   onCategoryItemClick(Movies_Category movies_category) {
     print(movies_category.categoreyId);
     selectedCategory = movies_category;
+
     setState(() {});
   }
 }
