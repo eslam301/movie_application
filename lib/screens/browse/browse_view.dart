@@ -113,13 +113,13 @@ class _BrowseViewState extends State<BrowseView> {
     var theme = Theme.of(context);
     return Container(
       decoration: BoxDecoration(
-        color: Colors.black,
+
       ),
       child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             toolbarHeight: 100,
-            backgroundColor: Colors.black,
+
             title: Padding(
               padding: const EdgeInsets.only(left: 10, top: 30),
               child: Text(
@@ -135,13 +135,14 @@ class _BrowseViewState extends State<BrowseView> {
           ),
           body: selectedCategory == null
               ? Padding(
-                  padding: const EdgeInsets.all(1),
+                  padding: const EdgeInsets.all(12),
                   child: GridView.builder(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
-                        mainAxisSpacing: 1,
+                        mainAxisSpacing: 20,
                         crossAxisSpacing: 30,
-                        childAspectRatio: 9 / 7),
+                        childAspectRatio: 9/6,
+                        ),
                     itemBuilder: (context, index) => MoviesCategoryItem(
                       movies_category: genres[index],
                       index: index,
@@ -149,11 +150,13 @@ class _BrowseViewState extends State<BrowseView> {
                     ),
                     itemCount: genres.length,
                   ),
-                )
+          )
               : Container(
                   child: GestureDetector(
                   onTap: () {},
-                ))),
+                )
+          )
+      ),
     );
   }
 

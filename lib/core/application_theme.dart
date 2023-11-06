@@ -29,7 +29,7 @@ class ApplicationTheme {
     ),
     scaffoldBackgroundColor: darkBlack,
     appBarTheme:  AppBarTheme(
-      backgroundColor: darkGrey,
+      backgroundColor: darkBlack,
       elevation: 0,
       iconTheme: const IconThemeData(color: Colors.white),
       titleTextStyle: const TextStyle(
@@ -53,7 +53,7 @@ class ApplicationTheme {
       titleLarge:GoogleFonts.inter(
         color: Colors.white,
         fontSize: 18,
-        fontWeight: FontWeight.w400,
+        fontWeight: FontWeight.w500,
       ),
       bodyLarge: GoogleFonts.inter(
         color: Colors.white,

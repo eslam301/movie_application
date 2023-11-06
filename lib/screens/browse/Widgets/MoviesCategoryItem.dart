@@ -26,14 +26,33 @@ class _MoviesCategoryItemState extends State<MoviesCategoryItem> {
         widget.onItemClick(widget.movies_category);
       },
       child: Container(
+
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(),
+          borderRadius: BorderRadius.circular(15),
+          color: theme.colorScheme.secondary,
+          image: DecorationImage(
+            image: AssetImage(widget.movies_category.categoreyImage),
+            fit: BoxFit.cover,
+          )
         ),
+
+        clipBehavior: Clip.antiAlias,
         child: Stack(
           children: [
-            Image.asset(widget.movies_category.categoreyImage),
-            Padding(
-              padding: const EdgeInsets.all(15),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.black.withOpacity (0.9),
+                    Colors.black.withOpacity (0.3),
+                  ],
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                ),
+              ),
+            ),
+            Center(
               child: Text(
                 widget.movies_category.categoreytitle,
                 style: theme.textTheme.titleLarge!
